@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.revision_app.login.LoginActivity
 import com.example.revision_app.retrofit.Constants
-import com.example.revision_app.retrofit.login.LoginInfo
 import com.example.revision_app.retrofit.login.LoginService
 import com.example.revision_app.utils.NetworkUtil
 import kotlinx.coroutines.Dispatchers

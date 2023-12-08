@@ -1,23 +1,16 @@
 package com.example.revision_app
 
-import android.content.ClipData.Item
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import com.example.revision_app.goals.GoalsActivity
-import com.example.revision_app.login.LoginFragment
-import com.example.revision_app.login.RegisterFragment
-import com.example.revision_app.login.UserListFragment
 import com.example.revision_app.revisions.RevisionActivity
 import com.example.revision_app.tasks.TasksActivity
 import com.example.revision_app.utils.NetworkUtil

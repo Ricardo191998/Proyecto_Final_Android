@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace 'com.rrosalesr.revision_app'
+    namespace 'com.example.revision_app'
     compileSdk 33
 
     defaultConfig {
