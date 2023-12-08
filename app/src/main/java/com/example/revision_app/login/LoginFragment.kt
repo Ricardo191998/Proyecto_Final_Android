@@ -204,8 +204,6 @@ class LoginFragment : Fragment() {
 
                 override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
                     super.onAuthenticationSucceeded(result)
-                    //Autenticación exitosa
-                    Log.d("RESULT", "autenticado")
 
                     val fragmentManager = requireActivity().supportFragmentManager
 
