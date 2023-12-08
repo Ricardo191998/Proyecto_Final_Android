@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".tasks.TasksActivity"
+        android:id="@+id/mainLayout"
+        android:orientation="vertical"
+        android:background="#F5F5F5"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/container1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/container2">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+
+                    android:layout_marginLeft="16dp"
+                    android:text="Pendientes"/>
+                <Button
+                    android:id="@+id/buttonWithIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/baseline_add_24"
+                    android:drawableTint="@color/white"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="16dp"
+                    android:text="Agregar Tarea"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:onClick="onClick" />
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/sv_pendind"
+                    android:tag="pending"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_pending"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:listitem="@layout/task_item"
+                            android:layout_marginBottom="16dp" />
+                </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/container3"
+            app:layout_constraintTop_toBottomOf="@+id/container1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+                    android:layout_marginLeft="16dp"
+                    android:text="En progreso"/>
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/sv_inprogress"
+                    android:tag="in-progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_inprogress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:listitem="@layout/task_item"
+                            android:layout_marginBottom="16dp" />
+                </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#CCCCCC"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/container2"
+            app:layout_constraintBottom_toBottomOf="parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+                    android:layout_marginLeft="16dp"
+                    android:text="Completadas"/>
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:id="@+id/sv_completed"
+                    android:tag="finished"
+                    android:layout_height="match_parent">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_completed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:listitem="@layout/task_item"
+                            android:layout_marginBottom="16dp" />
+                </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

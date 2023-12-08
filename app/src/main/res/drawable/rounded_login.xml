@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#B2EBF2" /> <!-- Color de fondo de la vista -->
+    <corners
+        android:radius="40dp"
+        android:topLeftRadius="40dp"
+        android:topRightRadius="40dp" /> <!-- Radio de las esquinas -->
+</shape>
